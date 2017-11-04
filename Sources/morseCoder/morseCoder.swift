@@ -42,11 +42,11 @@ public func ReadMorse(path:String) throws -> ([String: Character], [Character: S
     }
 }
 public struct morseCoder {
-    var word: String = ""
-    var morseWord: String = ""
-    var morseToCh: [String: Character] = [:]
-    var chToMorse: [Character: String] = [:]
-    init(alph: String) throws {
+    public var word: String = ""
+    public var morseWord: String = ""
+    public var morseToCh: [String: Character] = [:]
+    public var chToMorse: [Character: String] = [:]
+    public init(alph: String) throws {
         (morseToCh, chToMorse) = try ReadMorse(path: "morse_code.txt")
         word = alph
         morseWord = try encode(alph: alph)
